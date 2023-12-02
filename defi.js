@@ -1,4 +1,4 @@
-var contractAddress = "0xc0f5c721a94c9b54031876e99c46452c71facff7";
+var contractAddress = "0xc954974b0Ccd4043A172679d3d9CB30e10a09c2f";
 var web3;
 var myContract;
 var tick, holderAmount, maxSupply, deployTime, totalMinted, deployId, amountPerMint, decimals, deployer, txAmount;
