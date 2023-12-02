@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="./defi.js"></script>
+    <script src="./abi.js"></script>
+    <script src="./show.js"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.6.0/ethers.umd.min.js"></script>
+
+    <!-- fontawesome.com -->
+    <script
+      src="https://kit.fontawesome.com/cb14df9fc6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- TopNav -->
+    <nav class="MainPageNav">
+      <!-- For Desktop -->
+      <div class="NavLeft_desktop">
+        <image
+          src="https://cdn.glitch.global/db7f31e4-4de3-4887-a6ab-efa14b86c05f/logo.svg?v=1700573770022"
+          height="64"
+          width="80"
+        ></image>
+      </div>
+      <!-- ======== -->
+      <ul class="flex-nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Tokens</a></li>
+        <li><a href="Inscr.html">Marketplace (coming soon)</a></li>
+      </ul>
+      <div class="NavRight">
+        <button id="connectedId" class="NR_BTN" onclick="Walletconnect()">
+             Connect Wallet
+        </button>
+         <p id="account"></p>
+      </div>
+    </nav>
+
+    <div class="MainDiv">
+      <div class="MainPagediv">
+        <div class="P2Topdiv">
+          <h3 class="P2chainTitle" style="color: white">My Inscriptions</h3>
+          <p class="P2Topdiv_P1" style="color: white">
+            Please connect your wallet
+          </p>
+        </div>
+        <div class="P2Connect">
+          <a href="#" class="Connectbutton">Connect</a>
+        </div>
+      </div>
+    </div>
+    <!-- ======== -->
+  </body>
+</html>

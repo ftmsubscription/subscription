@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="./defi.js"></script>
+    <script src="./token.js"></script>
+    <script src="./abi.js"></script>
+    <script src="./show.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.6.0/ethers.umd.min.js"></script>
+
+    <!-- fontawesome.com -->
+    <script
+      src="https://kit.fontawesome.com/cb14df9fc6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- TopNav -->
+    <nav class="MainPageNav">
+      <!-- For Desktop -->
+      <div class="NavLeft_desktop">
+        <image
+          src="https://cdn.glitch.global/db7f31e4-4de3-4887-a6ab-efa14b86c05f/logo.svg?v=1700573770022"
+          height="64"
+          width="80"
+        ></image>
+      </div>
+      <!-- ======== -->
+      <ul class="flex-nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Tokens</a></li>
+        <li><a href="#">Marketplace (coming soon)</a></li>
+      </ul>
+      <div class="NavRight">
+        <button id="connectedId" class="NR_BTN" onclick="Walletconnect()">
+          Connect Wallet
+        </button>
+        <p id="account"></p>
+      </div>
+    </nav>
+    <!-- TopNav -->
+
+    <div class="tMainDiv">
+      <a href="/index.html">
+        <div class="tokens">
+          <svg
+            href="/index.html"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+            fill="none"
+            style="color: rgb(255, 255, 255)"
+          >
+            <path
+              data-v-5b50139c=""
+              stroke="currentColor"
+              stroke-width="2"
+              d="M9.646 6.5 3 13m0 0h18M3 13l6.646 6.5"
+            ></path>
+          </svg>
+          <div class="tkname">
+            <div id="tokenName"></div>
+          </div>
+          <span class="tkchain">frc-20</span>
+        </div>
+      </a>
+    </div>
+    <!-- ======== -->
+    <div class="token_info">
+      <div class="token_mint">
+        <p>Overview</p>
+        <button class="MintBT" onclick="mint_run()">Mint</button>
+      </div>
+       <div id="erroreth" class="MintButton_Frame2" align="center" style="display:none; color: BLACK; font-family: 'Anton', sans-serif;font-size: 20px;">
+            Please Switch To FTM Network
+            </div>
+      <i style="border-bottom: 1px solid gray; width: 99%"></i>
+      <div class="token_Overview">
+        <p id="InscriptionID">
+          Inscription ID<span
+            ></span
+          >
+        </p>
+        <p id="Max_Supply">Max Supply<span> </span></p>
+        <p id="Minted">Minted<span> </span></p>
+        <p id="Limit_per_mint">Limit per mint<span> </span></p>
+        <p id="Decimal">Decimal<span> </span></p>
+        <p id="Deploy_By">
+          Deploy By<span> </span>
+        </p>
+        <p id="Deploy_Time">Deploy Time<span> </span></p>
+        <p id="Creator">
+          Creator<span> </span>
+        </p>
+        <p id="Holders">Holders<span> </span></p>
+        <p id="Total_Transactions">Total Transactions<span> </span></p>
+      </div>
+    </div>
+    <!-- ======== -->
+
+    <script>
+      var token;
+      function mint_run() {
+        mintText(token);
+      }
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      token = getParameterByName("token");
+      tokenName.innerHTML = token;
+      getTokenPage();
+    
+    </script>
+  </body>
+</html>
