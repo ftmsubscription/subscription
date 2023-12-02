@@ -1,0 +1,1021 @@
+body {
+  display: block;
+  background-color: #171a1f;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-width: 630px;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+nav a {
+  color: white; /* Remove Hyperlink Color */
+  font-size: 16px;
+  text-decoration: none; /* Removal of hyperlinked bottom line */
+}
+
+nav ul li a {
+  font-size: 20px;
+}
+
+.MenuPage a {
+  font-size: 30px;
+}
+
+nav a:hover {
+  /*background-color: rgb(115, 115, 115);*/
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: #3c5bff;
+  color: white;
+}
+
+.MainPageNav {
+  display: flex;
+  width: 95%;
+  height: 64px;
+  background-color: #171a1f;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 300px;
+  z-index: 20;
+  margin: 0 auto;
+}
+
+.NavLeft_desktop {
+  display: block;
+  padding-left: 1%;
+}
+
+.MenuBTN {
+  height: auto;
+  background-color: transparent;
+  border: none;
+}
+
+.flex-nav {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 450px;
+  list-style: none;
+  flex-direction: row;
+}
+
+.NavRight {
+  display: flex;
+    align-content: stretch;
+    padding-right: 1%;
+    padding-left: 1%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3c5bff;
+    transition: 0.6s;
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: auto;
+    margin-right: 2%;
+}
+.NR_BTN {
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #3c5bff;
+  transition: 0.6s;
+  color: #FFFFFF;
+}
+
+.NR_BTN:hover {
+  background-color: #ffbb77;
+}
+.NR_BTN:active {
+  background-color: #3c5bff;
+}
+.NavRight:hover {
+  background-color: #ffbb77;
+}
+.NavRight:active {
+  background-color: #3c5bff;
+}
+
+.MainDiv {
+  margin: 0% 5% 5% 5%;
+  text-align: center;
+}
+.fTitle{
+  line-height: 1.5;
+    color: #3C5BFF;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: .02667rem;
+}
+
+.fInput{
+    display: flex;
+    align-items: center;
+    width: 780px;
+    height: 48px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-color: #2f343e;
+    transition: all .2s ease-in-out 0s;
+    margin: 0.53333rem auto;
+    justify-content: space-around;
+}
+.fInput input {
+    flex: 0.95;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 40px;
+    background-color: #2f343e;
+    border: none;
+    padding: 0 0.26667rem;
+    outline: none;
+}
+.fInput i{
+  background-color: #2f343e;
+    width: 0.02667rem;
+    height: 100%;
+    margin-left: 0.10667rem;
+}
+
+.fbutton{
+    background-color: #2f343e;
+    cursor: pointer;
+    /* margin: auto 0; */
+    border-right: none;
+    border-left-color: #2F343E;
+    border-top: none;
+    border-bottom: none;
+    height: 100%;
+}
+
+.fbutton svg{
+  margin-left: 10px;
+}
+.fsubManiu{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 35px;
+}
+.ftool{
+  display: flex;
+  background-color: #36383E;
+  width: 500px;
+}
+.ftool button{
+  background-color: #2f343e;
+  color: #ffffff;
+  height: 40px;
+  width: 100%;
+  font-size: 18px;
+  border: none;
+}
+
+.ftool button:hover{
+  background-color: #6699FF;
+}
+.ftoolBTNactive {
+  background-color: #3C5BFF !important;
+}
+
+.fList{
+  display: flex;
+    background-color: #2f343e;
+    width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid gray;
+    flex-direction: column;
+    align-items: center;
+}
+.ltop{
+  display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 96%;
+}
+.ltop p{
+    color: #3C5BFF;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.lInput{
+    display: flex;
+    align-items: center;
+    width: 170px;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    background-color: #2f343e;
+    transition: all .2s ease-in-out 0s;
+    margin: 0.53333rem auto;
+    justify-content: space-around;
+    margin-right: 40px;
+    margin-top: 38px;
+}
+.lInput input {
+    flex: 0.9;
+    font-size: 10px;
+    color: #ffffff;
+    line-height: 22px;
+    background-color: #2f343e;
+    border: none;
+    padding: 0 0.26667rem;
+    outline: none;
+}
+.lInput i{
+  background-color: #2f343e;
+    width: 0.02667rem;
+    height: 100%;
+    margin-left: 0.10667rem;
+}
+
+.linputBT{
+    background-color: #2f343e;
+    cursor: pointer;
+    /* margin: auto 0; */
+    border-right: none;
+    border-left-color: #2F343E;
+    border-top: none;
+    border-bottom: none;
+    height: 100%;
+}
+
+.linputBT svg{
+  margin-left: 3px;
+}
+
+.list_table{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 420px;
+  
+  overflow: auto;
+  width: 90%;
+  
+  
+}
+
+.list_table table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  color: #ffffff;
+}
+
+
+.list_table th {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 13px;
+  /*border-bottom: 5px double #FFFFFF;*/
+}
+tbody tr:nth-child(1):hover{
+  background-color: #2f343e;
+}
+.list_table tr:hover {
+  background-color: #66B3FF;
+}
+
+.list_table tr {
+cursor: pointer;
+}
+
+.list_table td {
+  text-align: center;
+  padding: 15px; 
+  border-bottom: 2px solid #cccccc;
+}
+
+.list_table td a {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+
+.list_table td p {
+  color: #3c5bff;
+  font-size: 20px;
+}
+
+
+.switchpage{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+.switchpage p{
+  width: 29px;
+    display: flex;
+    color: #ffffff;
+    background-color: #2f343e;
+    border-radius: 5px;
+    border: 1px solid gray;
+    height: 28px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.switchpage button{
+    color: #ffffff;
+    background-color: #2f343e;
+    border-radius: 5px;
+    border: 1px solid gray;
+    height: 30px;
+    width: 30px;
+}
+.switchpage button:active{
+  background-color: #3C5BFF;
+}
+
+.long-list::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.long-list::-webkit-scrollbar-thumb {
+  background-color: #4CAF50; 
+  border-radius: 5px; 
+}
+
+.long-list::-webkit-scrollbar-track {
+  background-color: #f1f1f1; 
+}
+
+
+.long-list {
+  height: 300px; 
+  overflow-y: scroll;
+}
+/* home page*/
+.P2Topdiv{
+  margin-top: 20%;
+    font-family: "Fira Code", monospace;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 18px;
+    text-align: center;
+}
+.P2Topdiv_P1 {
+  margin-top: 50px;
+    font-family: "Fira Code", monospace;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 18px;
+    text-align: center;
+}
+.P2Connect{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.P2chainTitle{
+  margin: 0px;
+  font-weight: 600;
+  font-family: "Fira Code", monospace;
+  font-size: 4rem;
+  line-height: 1.167;
+  text-align: center;
+}
+.Connectbutton{
+    color: #ffffff;
+    line-height: inherit;
+    cursor: pointer;
+    background-color: #323232;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    padding: 9px 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.Connectbutton:active {
+  background-color: #505050;
+}
+
+/* home page*/
+/* tokenp2 page*/
+.tMainDiv{
+  padding-top: 3.2rem;
+  text-align: center;
+}
+.tMainDiv a{
+  text-decoration: none;
+}
+.tokens{
+  display: flex;
+  align-content: space-around;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 25px;
+}
+.tkname{
+  color: #3c5bff;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.tkchain{
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 3px solid #2f343e;
+  background-color:#2f343e;
+}
+.token_info{
+  display: flex;
+  background-color: #2f343e;
+  width: 900px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 2px solid gray;
+  flex-direction: column;
+  align-items: center;
+}
+.token_mint{
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-width: 100%;
+  
+  
+}
+
+/*My ins*/
+.backlpg{
+  color: #6C6C6C;
+}
+.miInfo{
+  display: flex;
+  color: 	#ADADAD	;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 900px;
+  margin: 0 auto;
+  align-items: center;
+  
+}
+.miInfoL{
+  display: flex;
+  justify-content: space-between;
+  width: 54%;
+  align-items: center;
+}
+.miInfo_Chainname{
+  color: #3c5bff;
+    border-radius: 30px;
+    border: 1px solid #3c5bff;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  margin-right: 10px;
+}
+.miInfo_balance{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+}
+.miInfo_balance2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    width: 150px;
+}
+
+.miMyInscrip2{
+  width: 900px;
+  margin: 0 auto;
+}
+
+.miInfo_balance_txt{
+  color:#3c5bff;
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+  padding-right: 5px;
+}
+.Splitline{
+  border-bottom: 1px solid gray;width:90%;
+  width: 90%;
+  margin: 0 auto;
+}
+.miMyInscrip{
+  display: flex;
+  color: #ffffff;
+  width: 900px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.miMyInsItem{
+  display: flex;
+    border: 1px solid gray;
+    color: #ffffff;
+    border-radius: 15px;
+    background-color: #2f343e;
+    flex-direction: column;
+    width: 25%;
+    height: 250px;
+}
+.miItem01{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.miItem02{
+  display: flex;
+  color: #6C6C6C;
+  
+}
+.miItem02 p {
+  border: 1px solid gray;
+}
+.miItem02 p:first-child {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.miItem03{
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.miItem04{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+/*My ins*/
+
+
+
+
+
+.token_mint p{
+  color: #ffffff;
+  font-size: 24px;
+}
+.token_mint button{
+  background-color: #3c5bff;
+    color: #ffffff;
+    border: none;
+    height: 55px;
+    width: 80px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.token_mint button:active {
+  background-color: #1e2f7f;
+}
+.token_Overview{
+  -webkit-justify-content: space-between;
+  width: 90%;
+}
+.token_Overview p{
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+/* tokenp2 page*/
+
+/* Homepage tick*/
+.tick_info {
+  display: flex;
+  background-color: #2f343e;
+  width: 100%;
+  margin-top: 5%;
+  border-radius: 10px;
+  border: 2px solid gray;
+  flex-direction: column;
+  align-items: center;
+}
+
+.THTitle{
+  color: #3C5BFF;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+.tick_container{
+  display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    margin: 1% 1% 1% 13%;
+  max-height: 430px;
+    overflow-y: auto;
+}
+
+.tick_div{
+  width: 160%; 
+  box-sizing: border-box; 
+  padding: 10px; 
+  border: 2px solid #3C5BFF;
+  border-radius: 10px;
+  margin: 1% 1% 1% 1%;
+}
+.tick_Title{
+   display: flex;
+  color: #3C5BFF;
+}
+
+.tick_balance {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+}
+.tick_price{
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+}
+.trade_BTN{
+  margin-left: 60%;
+  border: none;
+  border-radius: 10px;
+  background-color: #7B7B7B;
+  color: #ffffff;
+}
+.trade_BTN:active {
+  background-color: #7B7B7B; 
+}
+/* Homepage tick*/
+
+/* scrollbar style*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    }
+
+::-webkit-scrollbar-button {
+      background: transparent;
+      border-radius: 4px;
+    }
+
+::-webkit-scrollbar-track-piece {
+      background: transparent;
+    }
+
+::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: #3C5BFF;
+      border: 1px solid slategrey;
+    }
+
+::-webkit-scrollbar-track {
+      box-shadow: transparent;
+    }
+@media screen and (max-width: 399px)
+{
+  .MainDiv {
+    margin: 8% 8% 8% 8%;
+    padding-top: 3.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+  .fList {
+    display: flex;
+    background-color: #2f343e;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid gray;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fInput {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-color: #2f343e;
+    transition: all .2s ease-in-out 0s;
+    margin: 0.53333rem auto;
+    justify-content: space-around;
+}
+  .lInput input {
+    flex: 0.9;
+    font-size: 8px;
+    color: #ffffff;
+    line-height: 22px;
+    background-color: #2f343e;
+    border: none;
+    padding: 0 0.26667rem;
+    outline: none;
+  }
+  .ftool button{
+    background-color: #2f343e;
+    color: #ffffff;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    border: none;
+}
+  nav ul li a {
+  font-size: 16px;
+}
+  .flex-nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 300px;
+    list-style: none;
+    flex-direction: row;
+}
+  .fTitle {
+    line-height: 1.5;
+    color: #3C5BFF;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: .02667rem;
+}
+  .trade_BTN{
+  margin-left: 50%;
+  border: none;
+  border-radius: 10px;
+  background-color: #7B7B7B;
+  color: #ffffff;
+}
+  .tick_div {
+    width: 160%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid #3C5BFF;
+    border-radius: 10px;
+    margin: 1% 1% 1% 1%;
+    font-size: 12px;
+}
+  
+}
+
+@media screen and (min-width: 400px)
+{
+  .MainDiv {
+    margin: 5% 5% 5% 5%;
+    padding-top: 3.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+  .fList {
+    display: flex;
+    background-color: #2f343e;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid gray;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fInput {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-color: #2f343e;
+    transition: all .2s ease-in-out 0s;
+    margin: 0.53333rem auto;
+    justify-content: space-around;
+}
+  .lInput input {
+    flex: 0.9;
+    font-size: 8px;
+    color: #ffffff;
+    line-height: 22px;
+    background-color: #2f343e;
+    border: none;
+    padding: 0 0.26667rem;
+    outline: none;
+  }
+  .ftool button{
+    background-color: #2f343e;
+    color: #ffffff;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    border: none;
+}
+  nav ul li a {
+  font-size: 16px;
+}
+  .flex-nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 300px;
+    list-style: none;
+    flex-direction: row;
+}
+  .fTitle {
+    line-height: 1.5;
+    color: #3C5BFF;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: .02667rem;
+}
+  .trade_BTN{
+  margin-left: 50%;
+  border: none;
+  border-radius: 10px;
+  background-color: #7B7B7B;
+  color: #ffffff;
+}
+  .tick_div {
+    width: 160%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid #3C5BFF;
+    border-radius: 10px;
+    margin: 1% 1% 1% 1%;
+    font-size: 12px;
+}
+  
+}
+@media screen and (min-width: 680px)
+{
+  .MainDiv {
+    margin: 10% 10% 10% 10%;
+    padding-top: 3.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+  }
+  .fList {
+    display: flex;
+    background-color: #2f343e;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid gray;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fInput {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-color: #2f343e;
+    transition: all .2s ease-in-out 0s;
+    margin: 0.53333rem auto;
+    justify-content: space-around;
+}
+  .ftool button{
+    background-color: #2f343e;
+    color: #ffffff;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+}
+  nav ul li a {
+  font-size: 18px;
+}
+  .flex-nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 380px;
+    list-style: none;
+    flex-direction: row;
+}
+  .fTitle {
+    line-height: 1.5;
+    color: #3C5BFF;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: .02667rem;
+}
+  .trade_BTN{
+  margin-left: 55%;
+  border: none;
+  border-radius: 10px;
+  background-color: #7B7B7B;
+  color: #ffffff;
+}
+  
+  .tick_div {
+    width: 160%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid #3C5BFF;
+    border-radius: 10px;
+    margin: 1% 1% 1% 1%;
+    font-size: 12px;
+}
+  
+}
+
+@media screen and (min-width: 800px)
+{
+  .MainDiv {
+    margin: 5% 5% 5% 5%;
+    padding-top: 3.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+  }
+  .fTitle {
+    line-height: 1.5;
+    color: #3C5BFF;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: .02667rem;
+}
+}
+@media screen and (min-width: 1000px)
+{
+  .MainDiv {
+    margin: 5% 5% 5% 5%;
+    padding-top: 3.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+  }
+  .fList {
+    display: flex;
+    background-color: #2f343e;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid gray;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fInput {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-color: #2f343e;
+    transition: all .2s ease-in-out 0s;
+    margin: 0.53333rem auto;
+    justify-content: space-around;
+}
+}
