@@ -88,7 +88,7 @@ async function getTokenList(page) {
 
 function mintText(tokenNmea) {
 
-  const e = '{"p":"frc-20","op":"mint","tick":"' + tokenNmea + '","amt":"1000"}';
+  const e = '{"p":"frc20","op":"mint","tick":"' + tokenNmea + '","amt":"1000"}';
   const i = "text/plain;charset=utf-8";
   var o = ethers.utils.solidityPack(
     ["string", "uint8", "uint16", "uint32", "string", "string"],
@@ -177,7 +177,7 @@ function setsetInterval() {
       }
     });
     var currentURL = window.location.href;
-    if (count % 10 == 0) {
+    if (count % 5 == 0) {
       if (currentURL.includes("Token")) {
         getTokenPage();
       } else if(currentURL.includes("home")){
