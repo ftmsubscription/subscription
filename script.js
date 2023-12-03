@@ -52,7 +52,7 @@ function regenerateTable(
 
   linkElement.appendChild(paragraphElement);
 
-  linkElement.innerHTML += "frc-20";
+  linkElement.innerHTML += "frc20";
   chain.appendChild(linkElement);
 
   const timeCell = document.createElement("td");
