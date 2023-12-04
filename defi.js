@@ -53,7 +53,8 @@ function updateTokenInfo() {
   document.getElementById("InscriptionID").getElementsByTagName("span")[0].innerText = deployId;
   document.getElementById("Max_Supply").getElementsByTagName("span")[0].innerText = maxSupply;
   document.getElementById("Minted").getElementsByTagName("span")[0].innerText = totalMinted;
-  document.getElementById("Deploy_Time").getElementsByTagName("span")[0].innerText = timechang(deployTime);
+  document.getElementById("Max").getElementsByTagName("span")[0].innerText = "1000*100";
+  document.getElementById("Deploy_Time").getElementsByTagName("span")[0].innerText =deployTime ;
   document.getElementById("Creator").getElementsByTagName("span")[0].innerText = deployer;
   document.getElementById("Limit_per_mint").getElementsByTagName("span")[0].innerText = amountPerMint;
   document.getElementById("Decimal").getElementsByTagName("span")[0].innerText = decimals;

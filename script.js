@@ -58,7 +58,7 @@ function regenerateTable(
   const timeCell = document.createElement("td");
   timeCell.textContent = timechang(deployTime); 
   const progess = document.createElement("td");
-  progess.textContent = (_totalMinted / _maxSupply) * 100 + "%";
+  progess.textContent = ((_totalMinted / _maxSupply) * 100).toFixed(3) + "%";
   const holder = document.createElement("td");
   holder.textContent = holderAmount;
   const objectCell = document.createElement("td");
