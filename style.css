@@ -38,6 +38,24 @@ nav a:hover {
   color: white;
 }
 
+.MainPageNav .NavLeft_desktop a {
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: #171a1f;
+  color: white;
+}
+
+#XImage {
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 45px; 
+  cursor: pointer;
+}
+
+
 .MainPageNav {
   display: flex;
   width: 95%;
