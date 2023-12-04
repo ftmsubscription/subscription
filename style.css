@@ -152,8 +152,8 @@ nav a:hover {
     width: 780px;
     height: 48px;
     border-radius: 10px;
-    border: 2px solid gray;
-    background-color: #2f343e;
+    border: 1px solid #2F343E;
+    background-color: #202229;
     transition: all .2s ease-in-out 0s;
     margin: 0.53333rem auto;
     justify-content: space-around;
@@ -163,7 +163,7 @@ nav a:hover {
     font-size: 24px;
     color: #ffffff;
     line-height: 40px;
-    background-color: #2f343e;
+    background-color: #202229;
     border: none;
     padding: 0 0.26667rem;
     outline: none;
@@ -176,18 +176,20 @@ nav a:hover {
 }
 
 .fbutton{
-    background-color: #2f343e;
+    background-color: #202229;
     cursor: pointer;
-    /* margin: auto 0; */
+    border: none;
+    /* margin: auto 0; 
     border-right: none;
     border-left-color: #2F343E;
     border-top: none;
     border-bottom: none;
+    */
     height: 100%;
 }
 
 .fbutton svg{
-  margin-left: 10px;
+  /*margin-left: 10px;*/
 }
 .fsubManiu{
   display: flex;
@@ -218,11 +220,11 @@ nav a:hover {
 
 .fList{
   display: flex;
-    background-color: #2f343e;
+    background-color: #202229;
     width: 900px;
     margin: 0 auto;
     border-radius: 10px;
-    border: 2px solid gray;
+    border: 1px solid #2F343E;
     flex-direction: column;
     align-items: center;
 }
@@ -329,7 +331,7 @@ cursor: pointer;
 .list_table td {
   text-align: center;
   padding: 15px; 
-  border-bottom: 2px solid #cccccc;
+  border-bottom: 1px solid #2F343E;
 }
 
 .list_table td a {
@@ -356,9 +358,9 @@ cursor: pointer;
   width: 29px;
     display: flex;
     color: #ffffff;
-    background-color: #2f343e;
+    background-color: #202229;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 1px solid #2F343E;
     height: 28px;
     justify-content: space-around;
     align-items: center;
@@ -367,9 +369,9 @@ cursor: pointer;
 
 .switchpage button{
     color: #ffffff;
-    background-color: #2f343e;
+    background-color: #202229;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 1px solid #2F343E;
     height: 30px;
     width: 30px;
 }
@@ -474,11 +476,11 @@ cursor: pointer;
 }
 .token_info{
   display: flex;
-  background-color: #2f343e;
+  background-color: #202229;
   width: 900px;
   margin: 0 auto;
   border-radius: 10px;
-  border: 2px solid gray;
+  border: 1px solid #2F343E;
   flex-direction: column;
   align-items: center;
 }
@@ -629,21 +631,22 @@ cursor: pointer;
 }
 .token_Overview p{
   display: flex;
-  color: #ffffff;
+  color: #B1B2B4;
   align-items: center;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
 }
 /* tokenp2 page*/
 
 /* Homepage tick*/
 .tick_info {
   display: flex;
-  background-color: #2f343e;
+  background-color: #202229;
   width: 100%;
   margin-top: 5%;
   border-radius: 10px;
-  border: 2px solid gray;
+  border: 1px solid #2F343E;
   flex-direction: column;
   align-items: center;
 }
@@ -737,11 +740,11 @@ cursor: pointer;
 }
   .fList {
     display: flex;
-    background-color: #2f343e;
+    background-color: #202229;
     width: 100%;
     margin: 0 auto;
     border-radius: 10px;
-    border: 2px solid gray;
+    border: 1px solid #2F343E;
     flex-direction: column;
     align-items: center;
   }
@@ -751,8 +754,8 @@ cursor: pointer;
     width: 100%;
     height: 48px;
     border-radius: 10px;
-    border: 2px solid gray;
-    background-color: #2f343e;
+    border: 1px solid #2F343E;
+    background-color: #202229;
     transition: all .2s ease-in-out 0s;
     margin: 0.53333rem auto;
     justify-content: space-around;
@@ -827,11 +830,11 @@ cursor: pointer;
 }
   .fList {
     display: flex;
-    background-color: #2f343e;
+    background-color: #202229;
     width: 100%;
     margin: 0 auto;
     border-radius: 10px;
-    border: 2px solid gray;
+    border: 1px solid #2F343E;
     flex-direction: column;
     align-items: center;
   }
@@ -841,8 +844,8 @@ cursor: pointer;
     width: 100%;
     height: 48px;
     border-radius: 10px;
-    border: 2px solid gray;
-    background-color: #2f343e;
+    border: 1px solid #2F343E;
+    background-color: #202229;
     transition: all .2s ease-in-out 0s;
     margin: 0.53333rem auto;
     justify-content: space-around;
@@ -916,11 +919,11 @@ cursor: pointer;
   }
   .fList {
     display: flex;
-    background-color: #2f343e;
+    background-color: #202229;
     width: 100%;
     margin: 0 auto;
     border-radius: 10px;
-    border: 2px solid gray;
+    border: 1px solid #2F343E;
     flex-direction: column;
     align-items: center;
   }
@@ -930,8 +933,8 @@ cursor: pointer;
     width: 100%;
     height: 48px;
     border-radius: 10px;
-    border: 2px solid gray;
-    background-color: #2f343e;
+    border: 1px solid #2F343E;
+    background-color: #202229;
     transition: all .2s ease-in-out 0s;
     margin: 0.53333rem auto;
     justify-content: space-around;
@@ -1016,11 +1019,11 @@ cursor: pointer;
   }
   .fList {
     display: flex;
-    background-color: #2f343e;
+    background-color: #202229;
     width: 100%;
     margin: 0 auto;
     border-radius: 10px;
-    border: 2px solid gray;
+    border: 1px solid #2F343E;
     flex-direction: column;
     align-items: center;
   }
@@ -1030,8 +1033,8 @@ cursor: pointer;
     width: 100%;
     height: 48px;
     border-radius: 10px;
-    border: 2px solid gray;
-    background-color: #2f343e;
+    border: 1px solid #2F343E;
+    background-color: #202229;
     transition: all .2s ease-in-out 0s;
     margin: 0.53333rem auto;
     justify-content: space-around;

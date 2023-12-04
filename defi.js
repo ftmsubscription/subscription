@@ -48,19 +48,22 @@ async function getTokenPage() {
     console.error(error);
   }
 }
+function formatNumber(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 function updateTokenInfo() {
-  document.getElementById("InscriptionID").getElementsByTagName("span")[0].innerText = deployId;
-  document.getElementById("Max_Supply").getElementsByTagName("span")[0].innerText = maxSupply;
-  document.getElementById("Minted").getElementsByTagName("span")[0].innerText = totalMinted;
-  document.getElementById("Max").getElementsByTagName("span")[0].innerText = "1000*100";
-  document.getElementById("Deploy_Time").getElementsByTagName("span")[0].innerText =deployTime ;
+  document.getElementById("InscriptionID").getElementsByTagName("span")[0].innerText = formatNumber(deployId);
+  document.getElementById("Max_Supply").getElementsByTagName("span")[0].innerText = formatNumber(maxSupply);
+  document.getElementById("Minted").getElementsByTagName("span")[0].innerText = formatNumber(totalMinted);
+  document.getElementById("Max").getElementsByTagName("span")[0].innerText = formatNumber(1000 * 100);
+  document.getElementById("Deploy_Time").getElementsByTagName("span")[0].innerText = deployTime;
   document.getElementById("Creator").getElementsByTagName("span")[0].innerText = deployer;
-  document.getElementById("Limit_per_mint").getElementsByTagName("span")[0].innerText = amountPerMint;
+  document.getElementById("Limit_per_mint").getElementsByTagName("span")[0].innerText = formatNumber(amountPerMint);
   document.getElementById("Decimal").getElementsByTagName("span")[0].innerText = decimals;
   document.getElementById("Deploy_By").getElementsByTagName("span")[0].innerText = deployer;
-  document.getElementById("Holders").getElementsByTagName("span")[0].innerText = holderAmount;
-  document.getElementById("Total_Transactions").getElementsByTagName("span")[0].innerText = txAmount;
+  document.getElementById("Holders").getElementsByTagName("span")[0].innerText = formatNumber(holderAmount);
+  document.getElementById("Total_Transactions").getElementsByTagName("span")[0].innerText = formatNumber(txAmount);
 }
 
 
