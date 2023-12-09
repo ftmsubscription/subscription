@@ -185,7 +185,7 @@ function setsetInterval() {
       if (currentURL.includes("Token")) {
         getTokenPage();
       } else if(currentURL.includes("home")){
-       
+        addressInput.value = address;
       }else{
          getTokenList(1);
         
@@ -215,7 +215,7 @@ function Walletconnect() {
       var newAddress = address;
       newAddress = newAddress.substr(0, 4) + "..." + newAddress.substr(38, 4);
       account.innerHTML = newAddress;
-      addressInput.value = address;
+     
 
       if (!timestart) {
         setsetInterval();
