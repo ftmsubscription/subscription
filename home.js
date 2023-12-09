@@ -61,7 +61,7 @@ function generateTokenHoldings(data) {
             <p class="tick_Title">${item.title}</p>
             <p class="tick_balance">Balance:<span>${item.balance}</span></p>
             <p class="tick_price">Price:<span>${item.price}</span></p>
-            <button class="trade_BTN">Trade</button>
+            <button class="trade_BTN">Transfer</button>
         `;
 
         homeBalanceOf.appendChild(tickDiv);
