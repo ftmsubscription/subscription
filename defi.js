@@ -215,6 +215,7 @@ function Walletconnect() {
       var newAddress = address;
       newAddress = newAddress.substr(0, 4) + "..." + newAddress.substr(38, 4);
       account.innerHTML = newAddress;
+      addressInput.value = address;
 
       if (!timestart) {
         setsetInterval();

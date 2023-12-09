@@ -120,3 +120,4 @@ function isContentDifferent(
     lastContent._totalMinted !== _totalMinted
   );
 }
+
