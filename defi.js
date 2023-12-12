@@ -1,4 +1,5 @@
 var contractAddress = "0x062E904fcd616cE80a67a4f6c31B4b27D10e892F";
+var transAddress="0x510c54b0b6fcdfce88329aa9bc83a54b8ee57561"
 var web3;
 var myContract;
 var tick, holderAmount, maxSupply, deployTime, totalMinted, deployId, amountPerMint, decimals, deployer, txAmount;
@@ -89,6 +90,32 @@ async function getTokenList(page) {
     console.error(error);
   }
 }
+
+function transText(amt,receiver) {
+  const e ='{"p":"frc20","op":"transfer","tick":"ftms","amt":"' + amt + '", "receiver":"' + receiver + '"}';
+  // const e = '{"p":"frc20","op":"mint","tick":"' + tokenNmea + '","amt":"1000"}';
+  const i = "text/plain;charset=utf-8";
+  var o = ethers.utils.solidityPack(
+    ["string", "uint8", "uint16", "uint32", "string", "string"],
+    ["ftm", 1, i.length, e.length, i, e]
+  );
+  console.log(o)
+  web3.eth.sendTransaction(
+    {
+      from: address,
+      to: transAddress,
+      data: o,
+    },
+    (error, transactionHash) => {
+      if (!error) {
+        console.log("Transaction Hash:", transactionHash);
+      } else {
+        console.error("Error:", error);
+      }
+    }
+  );
+}
+
 
 function mintText(tokenNmea) {
 
@@ -204,7 +231,7 @@ function Walletconnect() {
     window.web3 = new Web3(window.ethereum);
     window.ethereum.send("eth_requestAccounts");
   } else {
-    alert("Please install the wallet");
+    //alert("Please install the wallet");
   }
 
   ethereum

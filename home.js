@@ -60,10 +60,67 @@ function generateTokenHoldings(data) {
         tickDiv.innerHTML = `
             <p class="tick_Title">${item.title}</p>
             <p class="tick_balance">Balance:<span>${item.balance}</span></p>
-            <p class="tick_price">Price:<span>${item.price}</span></p>
-            <button class="trade_BTN">Transfer</button>
+            <p class="tick_price">Price:<span>${item.price}</span></p>  
+            <button class="trade_BTN" onclick="openTransferDialog()">Transfer</button>
+
         `;
 
         homeBalanceOf.appendChild(tickDiv);
     });
 }
+function openTransferDialog() {
+    var dialog = document.createElement("div");
+    dialog.innerHTML = `
+      <div class="overlay"></div>
+        <div class="transfer-dialog">
+            <div class="transfer-Address">
+            <label for="transferAddress">Address:</label>
+            <input type="text" id="transferAddress" placeholder="Enter Address">
+            </div>
+            <div class="transfer-Amount">
+            <label for="transferAmount">Amount:</label>
+            <div class="transfer-Amount-input">
+            <input type="text" id="transferAmount" placeholder="Enter Amount">
+            <button onclick="">Max</button>
+            </div>
+            </div>
+            <div class="button-container">
+                <button onclick="performTransfer()">Confirm</button>
+                <button onclick="closeTransferDialog()">Cancel</button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(dialog);
+}
+
+function performTransfer() {
+    var transferAddress = document.getElementById("transferAddress").value;
+    var transferAmount = document.getElementById("transferAmount").value;
+    transText(transferAmount,transferAddress);
+
+    closeTransferDialog();
+}
+
+function closeTransferDialog() {
+    var overlay = document.querySelector(".overlay");
+    if (overlay) {
+        overlay.parentNode.removeChild(overlay);
+    }
+
+    var dialog = document.querySelector(".transfer-dialog");
+    if (dialog) {
+        dialog.parentNode.removeChild(dialog);
+    }
+}
+
+var style = document.createElement("style");
+style.innerHTML = `
+    
+`;
+document.head.appendChild(style);
+
+
+// window.onload = function() {
+//     openTransferDialog();
+// };
