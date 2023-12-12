@@ -9,6 +9,9 @@ var ethid;
 var address;
 var balanceOf;
 var timestart = false;
+
+
+
 async function getHomePage() {
   try {
     const _address = document.getElementById('addressInput').value;
@@ -52,6 +55,9 @@ async function getTokenPage() {
 function formatNumber(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+
+
 
 function updateTokenInfo() {
   document.getElementById("InscriptionID").getElementsByTagName("span")[0].innerText = formatNumber(deployId);
