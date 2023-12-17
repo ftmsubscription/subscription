@@ -151,7 +151,7 @@ async function getList() {
   TokenContract = result.tokens[0][0];
 
   let result_id = await marketContract.methods
-    .getActiveOrders(TokenContract, 100, 1)
+    .getActiveOrders(TokenContract, 50000, 1)
     .call();
 
   // Fetch all orders
@@ -159,7 +159,7 @@ async function getList() {
   let currentPage = 1;
   let pageSize = 100;
 
-  while (result_id.length > 0) {
+  if (result_id.length > 0) {
     var result_list = await marketContract.methods
       .getOrders(result_id)
       .call();
@@ -176,16 +176,6 @@ async function getList() {
       allOrders.push(token);
     }
 
-    currentPage++;
-
-    try {
-      result_id = await marketContract.methods
-        .getActiveOrders(TokenContract, pageSize, currentPage)
-        .call();
-    } catch (error){
-      console.log("error", error);
-      break;
-    }
   }
 
   refreshListed(allOrders, result_id);
@@ -209,7 +199,7 @@ async function getUserList() {
   var currentPage = 1;
   var pageSize = 100;
 
-  while (result_id.length > 0) {
+  if (result_id.length > 0) {
     const result_list = await marketContract.methods
       .getOrders(result_id)
       .call();
@@ -224,17 +214,6 @@ async function getUserList() {
 
       // Do something with the token, for example, push it into an array
       allMyOrders.push(token);
-    }
-
-    currentPage++;
-
-    try {
-      result_id = await marketContract.methods
-        .getActiveOrders(TokenContract, pageSize, currentPage)
-        .call();
-    } catch {
-      console.log("result_id", result_id);
-      break;
     }
   }
 
