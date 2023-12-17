@@ -290,7 +290,7 @@ function renderListedItem(amount, price, seller, id) {
     Intl.NumberFormat().format(amount) +
     "</span></div>" +
     '<div class="miItem_per_price"><span>' +
-    web3.utils.fromWei(price, "ether") +
+     web3.utils.fromWei(price, "ether")/amount +
     " FTM/FTMS</span></div>" +
     "</div>" +
     '<div class="tradelist_info_B">' +
@@ -326,7 +326,7 @@ function renderMyListItem(amount, price, seller, id) {
     Intl.NumberFormat().format(amount) +
     "</span></div>" +
     '<div class="miItem_per_price"><span>' +
-    web3.utils.fromWei(price, "ether") +
+    web3.utils.fromWei(price, "ether")/amount+
     " FTM/FTMS</span></div>" +
     "</div>" +
     '<div class="tradelist_info_B">' +
