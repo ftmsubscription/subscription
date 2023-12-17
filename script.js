@@ -28,7 +28,6 @@ function timechang(timestamp) {
   return time;
 }
 
-
 const dataTable = document.getElementById("list_tableID");
 const addButton = document.getElementById("linputBT_TEST");
 
@@ -39,7 +38,6 @@ function regenerateTable(
   deployTime,
   _totalMinted
 ) {
-
   while (dataTable.rows.length > 1) {
     dataTable.deleteRow(1);
   }
@@ -56,7 +54,7 @@ function regenerateTable(
   chain.appendChild(linkElement);
 
   const timeCell = document.createElement("td");
-  timeCell.textContent = timechang(deployTime); 
+  timeCell.textContent = timechang(deployTime);
   const progess = document.createElement("td");
   progess.textContent = ((_totalMinted / _maxSupply) * 100).toFixed(3) + "%";
   const holder = document.createElement("td");
@@ -78,18 +76,22 @@ function regenerateTable(
 
 //For button change color
 document.addEventListener("DOMContentLoaded", function () {
-  var buttons = document.querySelectorAll(".ftool button");
-
-  buttons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      button.classList.add("ftoolBTNactive");
-      buttons.forEach(function (btn) {
-        if (btn !== button) {
-          btn.classList.remove("ftoolBTNactive");
-        }
+  try {
+    var buttons = document.querySelectorAll(".ftool button");
+    buttons[0].classList.add("miInfoBTNactive");
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        button.classList.add("ftoolBTNactive");
+        buttons.forEach(function (btn) {
+          if (btn !== button) {
+            btn.classList.remove("ftoolBTNactive");
+          }
+        });
       });
     });
-  });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 function listcoin(tick, holderAmount, _maxSupply, deployTime, _totalMinted) {
@@ -121,3 +123,51 @@ function isContentDifferent(
   );
 }
 
+//For button change color
+document.addEventListener("DOMContentLoaded", function () {
+  try {
+    var buttons = document.querySelectorAll(".miInfo button");
+    buttons[0].classList.add("miInfoBTNactive");
+    buttons.forEach(function (button) {
+      if (button.classList.contains("List_BTN")) {
+        return;
+      }
+      button.addEventListener("click", function () {
+        button.classList.add("miInfoBTNactive");
+        buttons.forEach(function (btn) {
+          if (btn !== button) {
+            btn.classList.remove("miInfoBTNactive");
+          }
+        });
+      });
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  showDiv("Market_Page1");
+});
+
+function showDiv(divId) {
+  try {
+    hideAllDivs();
+    document.getElementById(divId).style.display = "block";
+    if (divId == "Market_Page3") {
+      getUserList();
+    }
+    if (divId == "Market_Page1") {
+      getList();
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function hideAllDivs() {
+  var divs = document.querySelectorAll('div[id^="Market_Page"]');
+  divs.forEach(function (div) {
+    div.style.display = "none";
+  });
+}

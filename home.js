@@ -1,4 +1,4 @@
-var maxblance;
+
 // Function to create a tick div
 function createTickDiv(data) {
   const tickDiv = document.createElement("div");
@@ -56,13 +56,11 @@ function generateTokenHoldings(data) {
   data.forEach(function (item) {
     var tickDiv = document.createElement("div");
     tickDiv.className = "tick_div";
-
     tickDiv.innerHTML = `
-            <p class="tick_Title">${item.title}</p>
-            <p class="tick_balance">Balance:<span>${item.balance}</span></p>
-            <p class="tick_price">Price:<span>${item.price}</span></p>  
-            <button class="trade_BTN" onclick="openTransferDialog()">Transfer</button>
-
+            <div class="tick_Title_div"><p class="tick_Title">${item.title}</p></div>
+            <div class="tick_chain_div"><button>frc-20</button></div>
+            <div class="tick_balance_div"><p class="tick_balance"><span>${Intl.NumberFormat().format(item.balance)}</span></p></div>
+            <div class="trade_BTN_div"><button class="trade_BTN" onclick="openTransferDialog()">Transfer</button></div>
         `;
     maxblance = item.balance;
     homeBalanceOf.appendChild(tickDiv);

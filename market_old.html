@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FTMS</title>
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/db7f31e4-4de3-4887-a6ab-efa14b86c05f/Frame%208.svg?v=1702115918483"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.global/db7f31e4-4de3-4887-a6ab-efa14b86c05f/Frame%208.svg?v=1702115918483"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- The website JavaScript file -->
+    <script src="./script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="./defi.js"></script>
+    <script src="./market.js"></script>
+    <script src="./abi.js"></script>
+    <script src="./show.js"></script>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.6.0/ethers.umd.min.js"></script>
+
+    <!-- fontawesome.com -->
+    <script
+      src="https://kit.fontawesome.com/cb14df9fc6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&family=Vina+Sans&display=swap");
+    </style>
+    <!-- TopNav -->
+    <nav class="MainPageNav">
+      <!-- For Desktop -->
+      <div class="NavLeft_desktop">
+        <a href="home.html">
+          <image
+            src="https://cdn.glitch.global/db7f31e4-4de3-4887-a6ab-efa14b86c05f/logo.svg?v=1700573770022"
+            height="64"
+            width="80"
+          ></image>
+        </a>
+      </div>
+      <!-- ======== -->
+      <ul class="flex-nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Tokens</a></li>
+        <li><a href="market.html">Marketplace</a></li>
+      </ul>
+      <div class="NavRight">
+        <button id="connectedId" class="NR_BTN" onclick="Walletconnect()">
+          Connect Wallet
+        </button>
+        <p id="account"></p>
+      </div>
+    </nav>
+    <!-- TopNav -->
+
+    <div class="tMainDiv">
+      <a href="/index.html">
+        <div class="tokens">
+          <div class="tkname">
+            <div id="tokenName"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- ======== -->
+    <div class="market_main">
+      <div class="token_mint">
+        <p>FTMS Market</p>
+        <button id="list_btn" onclick="listItem()">List</button>
+      </div>
+      <hr
+        style="
+          width: 100%;
+          background-color: rgba(106, 90, 205, 0.5);
+          height: 0px;
+        "
+      />
+      <div
+        style="
+          width: 100%;
+          padding-left: 80px;
+          padding-top: 20px;
+          border-bottom: 1px;
+        "
+      >
+        <button class="market_button" onclick="showListed()" id="listed_btn">
+          Listed
+        </button>
+        <button class="market_button" onclick="showMyList()" id="my_list_btn">
+          My List
+        </button>
+      </div>
+      <div id="listed"></div>
+
+      <div id="my_listed" style="display: none"></div>
+
+      <div class="details-modal" style="display: none" id="list_box">
+        <div class="details-modal-title">
+          <h1>List</h1>
+          <h2>FTMS</h2>
+        </div>
+        <p id="priceLabel">Price(FTM)</p>
+        <input type="text" id="amountInput" class="list_input" />
+        <p id="amountLabel" style="margin-top: 10px">Amount</p>
+        <input type="text" id="priceInput" class="list_input" />
+        <button id="cancel" onclick="closeListPop()">Cancel</button>
+        <button id="confirm" onclick="confirmOrder()">Confirm</button>
+      </div>
+
+      <!-- ======== -->
+      <script
+        src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"
+      ></script>
+      <script>
+        function showMyList() {
+          $("#my_listed").css("display", "block");
+          $("#listed").css("display", "none");
+          $("#my_list_btn").css("background", "gray");
+          $("#listed_btn").css("background", "white");
+          refreshMyList();
+        }
+
+        function showListed() {
+          $("#my_listed").css("display", "none");
+          $("#listed").css("display", "block");
+          $("#my_list_btn").css("background", "white");
+          $("#listed_btn").css("background", "gray");
+          refreshListed();
+        }
+
+        function refreshListed() {
+          // 0. clear old data
+          // 1. get data from contracts
+          // 2. render and append
+          // example: mock data
+
+          listed = $("#listed");
+          listed.empty();
+          listed.append(renderListedItem(40000, 6000, "0x78...6789", 9980));
+        }
+
+        function refreshMyList() {
+          // 0. clear old data
+          // 1. get data from contracts
+          // 2. render and append
+          // example: mock data
+
+          my_listed = $("#my_listed");
+          my_listed.empty();
+          my_listed.append(renderMyListItem(50000, 6000, "0x78...6789", 9980));
+        }
+
+        // render an item to append
+        function renderListedItem(amount, price, address, seller, id) {
+          item =
+            '<div class="market_item"><span class="item_name">FTMS</span><span class="item_amount">' +
+            amount +
+            '</span><span class="item_per_price">' +
+            price / amount +
+            ' FTM/FTMS</span><span class="item_price"><img src="ftm.svg" alt="" style="width: 25px; height: 25px; float: left; margin-right: 10px;"> 6000</span><span class="seller">Seller: ' +
+            address +
+            '</span><button class="market_buy_button" onlick="BuyItem(' +
+            id +','+price
+            ')">Buy</button></div>';
+          return item;
+        }
+
+        function renderMyListItem(amount, price, address, seller, id) {
+          item =
+            '<div class="market_item"><span class="item_name">FTMS</span><span class="item_amount">' +
+            amount +
+            '</span><span class="item_per_price">' +
+            price / amount +
+            ' FTM/FTMS</span><span class="item_price"><img src="ftm.svg" alt="" style="width: 25px; height: 25px; float: left; margin-right: 10px;"> 6000</span><span class="seller">Seller: ' +
+            address +
+            '</span><button class="market_buy_button" onlick="CancelOrder(' +
+            id +
+            ')">Cancel</button></div>';
+          return item;
+        }
+
+       
+function listItem() {
+  // list item
+  // show the pop out
+  $("#list_box").css("display", "block");
+}
+function closeListPop() {
+  $("#list_box").css("display", "none");
+}
+
+       
+
+      </script>
+    </div>
+  </body>
+</html>

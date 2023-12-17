@@ -1,7 +1,7 @@
 body {
   display: block;
   background-color: #171a1f;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   min-width: 630px;
 }
@@ -111,6 +111,17 @@ nav a:hover {
     width: auto;
     margin-right: 2%;
 }
+.List_BTN {
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #3c5bff;
+  transition: 0.6s;
+  color: #FFFFFF;
+  height: 36px;
+  width: 60px;
+}
+
 .NR_BTN {
   height: 30px;
   border: none;
@@ -494,25 +505,117 @@ cursor: pointer;
   
 }
 
+.market_main{
+  display: flex;
+  background-color: #202229;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #2F343E;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+}
+
+.market_button {
+  float: left;
+  text-align: center;
+  line-height: 30px;
+  width: 120px;
+  height: 40px;
+  color: #FFF;
+  color: black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .19), inset 0 1px 0 rgba(255, 255, 255, .4);
+  border: solid 1px #0082BE;
+  border-radius: 2px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.market_button:hover {
+  background: gray;
+}
+
 /*My ins*/
 .backlpg{
   color: #6C6C6C;
+  display: flex;
 }
+.miMainDiv{
+  margin: 0 auto;
+  width: 94%;
+}
+
+
 .miInfo{
   display: flex;
-  color: 	#ADADAD	;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 900px;
+  color: #ADADAD;
+  justify-content: flex-start;
+  width: 100%;
   margin: 0 auto;
+  margin-left: 0;
+  margin-top: 2%;
   align-items: center;
-  
 }
+
+.miInfoL span{
+  padding-left: 3%;
+}
+.miInfoL span:first-child {
+  padding-left:0;
+}
+.miInfoL button{
+  border: none;
+  height: 36px;
+  background-color:#171a1f;
+  color: gray;
+  border-bottom: 2px solid;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 16px;
+}
+
+.miInfoR{
+  margin-right: 1%;
+}
+
+.miInfoBTNactive{
+color: #3C5BFF !important;
+}
+
+.miInfoTop2{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+
+.miInfoTop2 p:first-child {
+  border: none;
+  margin-left: 0;
+}
+
+.miInfo_balance{
+  color: gray;
+  margin: 1%;
+  margin-left: 3%;
+  /*border-left: 1px solid gray;*/
+}
+
+.miInfo_balance span {
+  padding-left: 10px; 
+  color: white;
+}
+.miInfoTop2 .miInfo_balance::after {
+  color: white;
+}
+
 .miInfoL{
   display: flex;
-  justify-content: space-between;
-  width: 54%;
+  justify-content: flex-start;
+  width: 100%;
   align-items: center;
+  margin-left: 0;
 }
 .miInfo_Chainname{
   color: #3c5bff;
@@ -529,18 +632,32 @@ cursor: pointer;
   display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 130px;
 }
+/*
 .miInfo_balance2{
   display: flex;
   justify-content: space-between;
   align-items: center;
     width: 150px;
+}*/
+.MarketDiv{
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: space-around;
 }
 
-.miMyInscrip2{
-  width: 900px;
+.miMyInscrip{
+  width: 100%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .miInfo_balance_txt{
@@ -552,26 +669,22 @@ cursor: pointer;
 }
 .Splitline{
   border-bottom: 1px solid gray;width:90%;
-  width: 90%;
+  width: 94%;
   margin: 0 auto;
 }
-.miMyInscrip{
-  display: flex;
-  color: #ffffff;
-  width: 900px;
-  margin: 0 auto;
-  justify-content: space-between;
-}
+
 
 .miMyInsItem{
   display: flex;
-    border: 1px solid gray;
-    color: #ffffff;
-    border-radius: 15px;
-    background-color: #2f343e;
-    flex-direction: column;
-    width: 25%;
-    height: 250px;
+  border: 1px solid gray;
+  color: #ffffff;
+  border-radius: 15px;
+  background-color: #2f343e;
+  flex-direction: column;
+  width: 20%;
+  height: 250px;
+  padding: 10px;
+  margin: 1%;
 }
 .miItem01{
   display: flex;
@@ -603,6 +716,149 @@ cursor: pointer;
   justify-content: space-around;
   
 }
+
+.miMyInsItem02{
+  /*display: flex;
+    border: 1px solid #2F343E;
+    color: #ffffff;
+    border-radius: 15px;
+    background-color: #202229;
+    flex-direction: column;*/
+    width: 20%;
+    height: 315px;
+    margin: 1%;
+    margin-top: 5%;
+    min-width: 180px;
+    /*padding: 10px;
+    justify-content: flex-start;
+    align-items: stretch;*/
+}
+/*
+.miMyInsItem02:hover{
+  border: 1px solid #3C5BFF;
+}
+*/
+.miMyInsItem02:hover .tradelist_info_T{
+  border: 1px solid #3C5BFF;
+  border-bottom:none;
+}
+.miMyInsItem02:hover .tradelist_info_B {
+  border: 1px solid #3C5BFF;
+  border-top:none;
+}
+.miMyInsItem02:hover{
+  border:none;
+}
+
+
+.miItem_name{
+  display: flex;
+  margin-top: 5px;
+  margin-left: 10px;
+  color:#3c5bff;
+}
+.miItem_amount{
+  padding-top: 25px;
+    font-size: 18px;
+}
+.miItem_amount span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+}
+
+.miItem_per_price{
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 14px;
+  font-size: 12px;
+  color:#3c5bff;
+}
+.miItem_price{
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+.miItem_price span {
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+}
+
+.miItem_seller{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  
+}
+.miItem_seller p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.miItem_seller span {
+  margin-right: 8px;
+  font-size: 18px;
+}
+.trade_BTN02{
+    border: none;
+    border-radius: 24px;
+    background-color: #171a1f;
+    border: 1px solid #2F343E;
+    color: #3C5BFF;
+    font-size: 14px;
+    width: 90%;
+    margin-top: 10px;
+    height: 30px;
+}
+.trade_BTN02:active {
+  background-color: #3c5bff;
+  color:white;
+}
+.trade_BTN02:hover{
+  border: 1px solid #3C5BFF;
+}
+
+.miItem_chain_div{
+  display: flex;
+}
+
+.miItem_chain_div button{
+  color: rgba(255, 255, 255, 0.44);
+    font-size: 10px;
+    background-color: #202229;
+    border: 1px solid rgba(255, 255, 255, 0.44);
+    margin: 5%;
+    border-radius: 4px;
+}
+
+
+.tradelist_info_T{
+  border: 1px solid #2F343E;
+  border-bottom: none;
+  color: #ffffff;
+  border-radius: 15px 15px 0px 0px;
+  margin: 1% 1% 0% 1%;
+  background-color: #202229;
+  padding-bottom: 20px;
+}
+
+.tradelist_info_B{
+  border: 1px solid #2F343E;
+  color: #ffffff;
+  border-radius: 0px 0px 15px 15px; 
+  border-top: none;
+  margin: 0% 1% 1% 1%;
+  background-color: rgba(255, 255, 255, 0.18); 
+  padding: 10px 
+}
+
+
 /*My ins*/
 
 
@@ -642,7 +898,8 @@ cursor: pointer;
 /* Homepage tick*/
 .tick_info {
   display: flex;
-  background-color: #202229;
+  /*background-color: #202229;*/
+  background-color:#171a1f;
   width: 100%;
   margin-top: 5%;
   border-radius: 10px;
@@ -659,33 +916,52 @@ cursor: pointer;
 }
 .tick_container{
   display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: center;
-    margin: 1% 1% 1% 13%;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  margin: 1% 1% 1% 1%;
   max-height: 430px;
-    overflow-y: auto;
+  overflow-y: auto;
+}
+#home_balanceOf {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .tick_div{
-  width: 160%; 
+  width: 200%; 
   box-sizing: border-box; 
   padding: 10px; 
-  border: 2px solid #3C5BFF;
+  border: 1px solid #2F343E;
   border-radius: 10px;
-  margin: 1% 1% 1% 1%;
+  margin: 1% 1% 1% 3.5%;
+  font-size: 12px;
+  width: 20%;
+  background-color: #202229;
 }
+.tick_div:hover{
+  border: 1px solid #3C5BFF;
+}
+
 .tick_Title{
-   display: flex;
+  display: flex;
   color: #3C5BFF;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-transform: capitalize;
 }
 
 .tick_balance {
   display: flex;
   justify-content: space-between;
   color: #ffffff;
+  align-items: center;
+  font-size: 27px;
+  font-family: 'Poppins', sans-serif;
 }
 .tick_price{
   display: flex;
@@ -693,15 +969,59 @@ cursor: pointer;
   color: #ffffff;
 }
 .trade_BTN{
-  margin-left: 50%;
-  border: none;
-  border-radius: 10px;
-  background-color: #3C5BFF;
-  color: #ffffff;
+    margin-left: 50%;
+    border: none;
+    border-radius: 24px;
+    background-color: #171a1f;
+    border: 1px solid #3C5BFF;
+    color: #3C5BFF;
+    font-size: 14px;
+    width: 55%;
+    height: 30px;
+  /*
+  padding: 10px;
+    height: 30px;
+    border-radius: 24px;
+    color: #3C5BFF;
+    border: 1px solid #3C5BFF;
+    background-color: #202229;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;*/
 }
 .trade_BTN:active {
-  background-color: #7B7B7B; 
+  background-color: rgba(255, 255, 255, 0.3); 
 }
+
+.tick_chain_div{
+  display: flex;
+  
+}
+.tick_chain_div button{
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 8px;
+  background-color: #202229;
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  margin-right: 5%;
+  border-radius: 4px;
+}
+.tick_balance_div{
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.trade_BTN_div{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10%;
+}
+
 /* Homepage tick*/
 /* Homepage Transfer*/
 .overlay {
@@ -821,6 +1141,111 @@ cursor: pointer;
         background-color:#3c5bff
     }
 /* Homepage Transfer*/
+/*Market*/
+.MarketList-dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        z-index: 1001;
+        border-radius: 10px;
+        color: white;
+        background-color: #202229;
+        border-color: #2F343E;
+        border-width: 1px; 
+        border-style: solid;
+        max-width: 400px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        min-width: 360px;
+        font-family: 'Anton', sans-serif;
+        
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 20px rgba(0, 0, 0, 0.25);
+    }
+    
+    .MarketList-Address input{
+        color: white;
+        background-color: #202229;
+        border-color: #2F343E;
+        border-width: 1px; 
+        border-style: solid;
+        padding-top: 3px;
+        margin-top: 3%;
+        width: 90%;
+        height: 44px;
+        padding: 0px 10px 0px 10px;
+        border-radius: 12px;
+        font-size: 14px;
+        outline: none;
+        /*filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));*/
+    }
+    .MarketList-Amount input{
+        color: white;
+        background-color: #202229;
+        border-color: #2F343E;
+        border-width: 1px; 
+        border-style: solid;
+        padding-top: 3px;
+        margin-top: 3%;
+        width: 80%;
+        height: 44px;
+        padding: 0px 10px 0px 10px;
+        border-right: none;
+        border-radius: 12px 0px 0px 12px;
+        font-size: 14px;
+        outline: none;
+        /*filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));*/
+    }
+
+    .MarketList-Address
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .MarketList-Amount
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px 0px 0px;
+    }
+
+    .MarketList-Amount-input button{
+        background-color: #202229;
+        border-color: #2F343E;
+        border-width: 1px; 
+        border-style: solid;
+        color: white;
+        height: 46px;
+        border-left: none;
+        margin-left: -5px;
+        font-size: 14px;
+        border-radius: 0px 12px 12px 0px;
+    }
+
+    .MarketList-Title{
+        display: flex;
+        color: white;
+        align-items: center;
+        justify-content: flex-start;
+        height: 15px;
+        padding-bottom: 25px;
+    }
+
+    .MarketList-Title p:first-child {
+        font-size: 16px;
+        padding-right: 10px;
+    }
+
+    .MarketList-Title p:last-child {
+        font-size: 22px;
+        color:#3c5bff;
+    }
+/*Market*/
+
+
+
 /* scrollbar style*/
 ::-webkit-scrollbar {
     width: 10px;
@@ -849,11 +1274,12 @@ cursor: pointer;
 {
   .MainDiv {
     margin: 8% 8% 8% 8%;
-    padding-top: 3.2rem;
+    /*padding-top: 3.2rem;*/
     text-align: center;
     display: flex;
     flex-direction: column;
     align-content: space-around;
+    margin-top: 0px;
 }
   .fList {
     display: flex;
@@ -877,6 +1303,18 @@ cursor: pointer;
     margin: 0.53333rem auto;
     justify-content: space-around;
 }
+  
+.fInput input {
+    flex: 0.95;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 40px;
+    background-color: #202229;
+    border: none;
+    padding: 0 0.26667rem;
+    outline: none;
+  }
+  
   .lInput input {
     flex: 0.9;
     font-size: 8px;
@@ -917,33 +1355,57 @@ cursor: pointer;
     letter-spacing: .02667rem;
 }
   .trade_BTN{
-  margin-left: 45%;
-  border: none;
-  border-radius: 10px;
-  background-color: #3C5BFF;
-  color: #ffffff;
+    margin-left: 50%;
+    border: none;
+    border-radius: 24px;
+    background-color: #171a1f;
+    border: 1px solid #3C5BFF;
+    color: #3C5BFF;
+    font-size: 14px;
+    width: 55%;
+    height: 30px;
 }
   .tick_div {
-    width: 160%;
+    width: 200%;
     box-sizing: border-box;
     padding: 10px;
-    border: 2px solid #3C5BFF;
+    border: 1px solid #2F343E;
     border-radius: 10px;
-    margin: 1% 1% 1% 1%;
+    margin: 1% 1% 1% 3.5%;
     font-size: 12px;
+    width: 40%;
+    background-color: #202229;
 }
   
+.miMyInsItem02 {
+    /*display: flex;
+    border: 1px solid #2F343E;
+    color: #ffffff;
+    border-radius: 15px;
+    background-color: #202229;
+    flex-direction: column;*/
+    width: 40%;
+    height: 315px;
+    margin: 1%;
+    margin-top: 5%;
+    min-width: 180px;
+    /*padding: 10px;
+    justify-content: flex-start;
+    align-items: stretch;*/
+  }  
+
 }
 
 @media screen and (min-width: 400px)
 {
   .MainDiv {
     margin: 5% 5% 5% 5%;
-    padding-top: 3.2rem;
+    /*padding-top: 3.2rem;*/
     text-align: center;
     display: flex;
     flex-direction: column;
     align-content: space-around;
+    margin-top: 0px;
 }
   .fList {
     display: flex;
@@ -967,6 +1429,17 @@ cursor: pointer;
     margin: 0.53333rem auto;
     justify-content: space-around;
 }
+.fInput input {
+    flex: 0.95;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 40px;
+    background-color: #202229;
+    border: none;
+    padding: 0 0.26667rem;
+    outline: none;
+  }
+  
   .lInput input {
     flex: 0.9;
     font-size: 8px;
@@ -1007,32 +1480,57 @@ cursor: pointer;
     letter-spacing: .02667rem;
 }
   .trade_BTN{
-  margin-left: 50%;
-  border: none;
-  border-radius: 10px;
-  background-color: #3C5BFF;
-  color: #ffffff;
+    margin-left: 50%;
+    border: none;
+    border-radius: 24px;
+    background-color: #171a1f;
+    border: 1px solid #3C5BFF;
+    color: #3C5BFF;
+    font-size: 14px;
+    width: 55%;
+    height: 30px;
 }
   .tick_div {
-    width: 160%;
+    width: 200%;
     box-sizing: border-box;
     padding: 10px;
-    border: 2px solid #3C5BFF;
+    border: 1px solid #2F343E;
     border-radius: 10px;
-    margin: 1% 1% 1% 1%;
+    margin: 1% 1% 1% 3.5%;
     font-size: 12px;
+    width: 40%;
+    background-color: #202229;
 }
+  
+.miMyInsItem02 {
+    /*display: flex;
+    border: 1px solid #2F343E;
+    color: #ffffff;
+    border-radius: 15px;
+    background-color: #202229;
+    flex-direction: column;*/
+    width: 40%;
+    height: 315px;
+    margin: 1%;
+    margin-top: 5%;
+    min-width: 180px;
+    /*padding: 10px;
+    justify-content: flex-start;
+    align-items: stretch;*/
+  }
+  
   
 }
 @media screen and (min-width: 680px)
 {
   .MainDiv {
     margin: 10% 10% 10% 10%;
-    padding-top: 3.2rem;
+    /*padding-top: 3.2rem;*/
     text-align: center;
     display: flex;
     flex-direction: column;
     align-content: space-around;
+    margin-top: 0px;
   }
   .fList {
     display: flex;
@@ -1056,6 +1554,17 @@ cursor: pointer;
     margin: 0.53333rem auto;
     justify-content: space-around;
 }
+  
+.fInput input {
+    flex: 0.95;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 40px;
+    background-color: #202229;
+    border: none;
+    padding: 0 0.26667rem;
+    outline: none;
+  }
   .ftool button{
     background-color: #2f343e;
     color: #ffffff;
@@ -1086,22 +1595,45 @@ cursor: pointer;
     letter-spacing: .02667rem;
 }
   .trade_BTN{
-  margin-left: 50%;
-  border: none;
-  border-radius: 10px;
-  background-color: #3C5BFF;
-  color: #ffffff;
+    margin-left: 50%;
+    border: none;
+    border-radius: 24px;
+    background-color: #171a1f;
+    border: 1px solid #3C5BFF;
+    color: #3C5BFF;
+    font-size: 14px;
+    width: 55%;
+    height: 30px;
 }
   
   .tick_div {
-    width: 160%;
+    width: 200%;
     box-sizing: border-box;
     padding: 10px;
-    border: 2px solid #3C5BFF;
+    border: 1px solid #2F343E;
     border-radius: 10px;
-    margin: 1% 1% 1% 1%;
+    margin: 1% 1% 1% 3.5%;
     font-size: 12px;
+    width: 40%;
+    background-color: #202229;
 }
+  
+.miMyInsItem02 {
+    /*display: flex;
+    border: 1px solid #2F343E;
+    color: #ffffff;
+    border-radius: 15px;
+    background-color: #202229;
+    flex-direction: column;*/
+    width: 40%;
+    height: 315px;
+    margin: 1%;
+    margin-top: 5%;
+    min-width: 180px;
+    /*padding: 10px;
+    justify-content: flex-start;
+    align-items: stretch;*/
+  }
   
 }
 
@@ -1109,11 +1641,12 @@ cursor: pointer;
 {
   .MainDiv {
     margin: 5% 5% 5% 5%;
-    padding-top: 3.2rem;
+    /*padding-top: 3.2rem;*/
     text-align: center;
     display: flex;
     flex-direction: column;
     align-content: space-around;
+    margin-top: 0px;
   }
   .fTitle {
     line-height: 1.5;
@@ -1123,16 +1656,68 @@ cursor: pointer;
     font-weight: 600;
     letter-spacing: .02667rem;
 }
+.fInput input {
+    flex: 0.95;
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 40px;
+    background-color: #202229;
+    border: none;
+    padding: 0 0.26667rem;
+    outline: none;
+  }
+  
+  .tick_div {
+    width: 200%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #2F343E;
+    border-radius: 10px;
+    margin: 1% 1% 1% 3.5%;
+    font-size: 12px;
+    width: 20%;
+    background-color: #202229;
+}
+  
+.miMyInsItem02 {
+  /*
+    display: flex;
+    border: 1px solid #2F343E;
+    color: #ffffff;
+    border-radius: 15px;
+    background-color: #202229;
+    flex-direction: column;
+  */
+    width: 20%;
+    height: 315px;
+    margin: 1%;
+    margin-top: 5%;
+    min-width: 180px;
+  /*
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: stretch;
+  */
+  }
+  .miItem_seller p {
+    font-size: 13px; 
+  }
+  .miItem_seller span {
+    margin-right: 8px;
+    font-size: 13px; 
+  }
+  
 }
 @media screen and (min-width: 1000px)
 {
   .MainDiv {
     margin: 5% 5% 5% 5%;
-    padding-top: 3.2rem;
+    /*padding-top: 3.2rem;*/
     text-align: center;
     display: flex;
     flex-direction: column;
     align-content: space-around;
+    margin-top: 0px;
   }
   .fList {
     display: flex;
@@ -1156,4 +1741,274 @@ cursor: pointer;
     margin: 0.53333rem auto;
     justify-content: space-around;
 }
+  
+.fInput input {
+    flex: 0.95;
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 40px;
+    background-color: #202229;
+    border: none;
+    padding: 0 0.26667rem;
+    outline: none;
+  }
+  
+  .tick_div {
+    width: 200%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #2F343E;
+    border-radius: 10px;
+    margin: 1% 1% 1% 3.5%;
+    font-size: 12px;
+    width: 20%;
+    background-color: #202229;
+ }
+  
+.miMyInsItem02 {
+    /*display: flex;
+    border: 1px solid #2F343E;
+    color: #ffffff;
+    border-radius: 15px;
+    background-color: #202229;
+    flex-direction: column;*/
+    width: 20%;
+    height: 315px;
+    margin: 1%;
+    margin-top: 5%;
+    min-width: 180px;
+    /*padding: 10px;
+    justify-content: flex-start;
+    align-items: stretch;*/
+  }
+  .miItem_seller p {
+    font-size: 13px; 
+  }
+  .miItem_seller span {
+    margin-right: 8px;
+    font-size: 13px; 
+  }
 }
+
+
+#listed {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 40px;
+}
+
+#my_listed {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 40px;
+}
+.market_item {
+  float: left;
+  margin-left: 26px;
+  margin-top: 20px;
+  width: 216px;
+  height: 260px;
+  background-color: transparent;
+  border: solid;
+  border-radius: 4px;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);  
+}
+
+.item_name {
+ float: left;
+ margin-top: 20px;
+ margin-left: 20px;
+ font-weight:800;
+}
+
+.item_amount {
+  width: 100%;
+  float: left;
+  text-align: center;
+  height: 40px;
+  align-items: center;
+  line-height: 40px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.item_per_price{
+  width: 100%;
+  float: left;
+  text-align: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.item_price {
+  float: left;
+  width: 100%;
+  padding-left: 20px;
+  margin-top: 15px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.seller {
+  float: left;
+  width: 100%;
+  padding-left: 20px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+
+
+.market_buy_button {
+  float: left;
+  text-align: center;
+  line-height: 30px;
+  width: 120px;
+  height: 40px;
+  color: #FFF;
+  background-color: #3C5BFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .19), inset 0 1px 0 rgba(255, 255, 255, .4);
+  border: solid 1px #0082BE;
+  border-radius: 4px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5px;
+}
+/* 悬停样式 */
+.market_buy_button:hover {
+  background-color:#0082BE;
+  color: white;
+  cursor: pointer;
+}
+
+.button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #16a34a;
+  border-radius: 0.25em;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 1em;
+}
+.button:hover {
+  background-color: #17ac4e;
+}
+
+.details-modal {
+  background: #ffffff;
+  border-radius: 0.5em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  max-width: 90%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30em;
+  text-align: left;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  z-index:999;
+}
+.details-modal .details-modal-title {
+  color: #111827;
+  padding: 1.5em 2em;
+  pointer-events: all;
+  position: relative;
+  width: calc(100% - 4.5em);
+  margin: 0;
+  height: 120px;
+}
+.details-modal .details-modal-title h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: normal;
+}
+#list_btn {
+  cursor: pointer;
+}
+.list_input {
+  outline-style: none ;
+  border: 1px solid #ccc; 
+  border-radius: 3px;
+  padding: 6px;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 14px;
+  height: 30px;
+  font-family: "Microsoft soft";
+  float: left;
+}
+
+#price {
+  float: left;
+  width: 85%;
+  margin-left: 5%;
+  margin: 0;
+  margin-left: 30px;
+}
+
+#amount {
+  float: left;
+  width: 85%;
+  margin-left: 5%;
+  margin: 0;
+  margin-left: 30px;
+}
+
+#confirm {
+  float: right;
+  text-align: center;
+  line-height: 30px;
+  width: 120px;
+  height: 40px;
+  color: #FFF;
+  background-color: #3C5BFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .19), inset 0 1px 0 rgba(255, 255, 255, .4);
+  border: solid 1px #0082BE;
+  border-radius: 4px;
+  width: 80px;
+  margin-left: 5%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#cancel {
+  float: right;
+  text-align: center;
+  line-height: 30px;
+  width: 120px;
+  height: 40px;
+  color: #FFF;
+  background-color: #3C5BFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .19), inset 0 1px 0 rgba(255, 255, 255, .4);
+  border: solid 1px #0082BE;
+  border-radius: 4px;
+  width: 80px;
+  margin-left: 5%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin-right: 5%;
+}
+#cancel:hover {
+  background-color: #2f343e;
+}
+#confirm:hover {
+  background-color: #2f343e;
+}
+/* .list_input:focus{
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+} */
