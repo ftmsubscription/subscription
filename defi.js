@@ -9,7 +9,7 @@ var ethid;
 var address;
 var balanceOf;
 var timestart = false;
-
+var maxblance;
 
 
 async function getHomePage() {
@@ -193,6 +193,7 @@ async function addCustomBlockchain() {
 }
 
 var count = 0;
+var FirstLoadin = false;
 
 function setsetInterval() {
   setInterval(function () {
@@ -214,11 +215,27 @@ function setsetInterval() {
       }
     });
     var currentURL = window.location.href;
-    if (count % 5 == 0) {
+    if (count % 10 == 0) {
       if (currentURL.includes("Token")) {
         getTokenPage();
       } else if(currentURL.includes("home")){
-        addressInput.value = address;
+        if (!FirstLoadin) {
+          addressInput.value = address;
+          FirstLoadin = true;
+        }
+        //addressInput.value = address;
+      }else if(currentURL.includes("market")){
+        getTotalMinted();
+        getTotalVolume();
+        getHolders();
+        var displayValue = $("#my_listed").css("display");
+
+        if (displayValue === "contents") {
+          getUserList();
+        } else {
+          getList();
+        }
+       
       }else{
          getTokenList(1);
         

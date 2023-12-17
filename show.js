@@ -1,9 +1,11 @@
 function showConnected(){
-   
+   try{
    BshowMinting=false;
    BshowWrongNetwork=false;
    document.getElementById("erroreth").style.display = "none";
-  
+  }catch (error) {
+    console.log(error);
+  }
 }
 var BshowWrongNetwork=false;
 function showWrongNetwork(){
@@ -29,4 +31,21 @@ function showStopMint(){
      document.getElementById("mintingId").style.display = "none";
         document.getElementById("maxtext").style.display = "none";
   
+}
+
+function showMyList() {
+  console.log("showMyList()")
+  $("#my_listed").css("display", "contents");
+  $("#listed").css("display", "none");
+  $("#my_list_btn").css("background", "gray");
+  $("#listed_btn").css("background", "white");
+  // refreshMyList();
+}
+
+function showListed() {
+  $("#my_listed").css("display", "none");
+  $("#listed").css("display", "contents");
+  $("#my_list_btn").css("background", "white");
+  $("#listed_btn").css("background", "gray");
+  // refreshListed();
 }

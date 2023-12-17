@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FTMS</title>
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/db7f31e4-4de3-4887-a6ab-efa14b86c05f/Frame%208.svg?v=1702115918483"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.global/db7f31e4-4de3-4887-a6ab-efa14b86c05f/Frame%208.svg?v=1702115918483"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- The website JavaScript file -->
+    <script src="./script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="./defi.js"></script>
+    <script src="./abi.js"></script>
+    <script src="./show.js"></script>
+    <script src="./market.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.6.0/ethers.umd.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- fontawesome.com -->
+    <script
+      src="https://kit.fontawesome.com/cb14df9fc6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+    </style>
+    <!-- TopNav -->
+    <nav class="MainPageNav">
+      <!-- For Desktop -->
+      <div class="NavLeft_desktop">
+        <image
+          src="https://cdn.glitch.global/db7f31e4-4de3-4887-a6ab-efa14b86c05f/logo.svg?v=1700573770022"
+          height="64"
+          width="80"
+        ></image>
+      </div>
+      <!-- ======== -->
+      <ul class="flex-nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Tokens</a></li>
+        <li><a href="market.html">Marketplace</a></li>
+      </ul>
+      <div class="NavRight">
+        <button id="connectedId" class="NR_BTN" onclick="Walletconnect()">
+          Connect Wallet
+        </button>
+        <p id="account"></p>
+      </div>
+    </nav>
+    <!-- TopNav -->
+    <div class="MainDiv">
+      <div class="miMainDiv">
+        <div class="backlpg">
+          <!--<p>&lt; My Inscriptions</p>-->
+        </div>
+        <div class="miInfoTop">
+          <p class="miInfo_Chainname">FTM-20</p>
+        </div>
+        <div class="miInfoTop2">
+          <p class="miInfo_balance">Floor<span id="Floor">0</span><span>FTM</span></p>
+          <p class="miInfo_balance">
+            Total Volume<span id="Volume">0</span><span>FTM</span>
+          </p>
+          <p class="miInfo_balance">Total Supply<span id="Supply">0</span></p>
+          <p class="miInfo_balance">Holders<span id="Holders">0</span></p>
+        </div>
+        <div class="miInfo">
+          <div class="miInfoL">
+            <button
+              class="Market_List"
+              onclick="showDiv('Market_Page1')"
+              id="Market_List01"
+            >
+              Listed
+            </button>
+            <!--<button class="Market_Activities" onclick="showDiv('Market_Page2')" id="Market_List02">Activities</button>-->
+            <button
+              class="Market_MyOrders"
+              onclick="showDiv('Market_Page3')"
+              id="Market_List03"
+            >
+              My Orders
+            </button>
+          </div>
+          <div class="miInfoR">
+            <button class="List_BTN" onclick="openMarketListDialog()">
+              List
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="Splitline">
+        <i style="border-bottom: 1px solid gray; width: 99%"></i>
+      </div>
+     
+      <div class="MarketDiv" id="Market_Page1">
+         <div
+          id="erroreth"
+          class="MintButton_Frame2"
+          align="center"
+          style="
+            display: none;
+            color: White;
+            font-family: 'Anton', sans-serif;
+            font-size: 20px;
+          "
+        >
+          Please Switch To FTM Network
+        </div>
+
+       
+        <div class="miMyInscrip">
+          
+             
+            <div id="listed"></div>
+            
+        </div> 
+      </div>
+      <div class="MarketDiv" id="Market_Page2" style="display: none">
+        <div class="miMyInscrip">
+          <div class="miMyInsItem02">
+            <div class="miItem_name">FTMS</div>
+            <div class="miItem_amount"><span>40000</span></div>
+            <div class="miItem_per_price"><span>0.15 FTM/FTMS</span></div>
+            <div class="miItem_price">
+              <img
+                src="https://cdn.glitch.global/db7f31e4-4de3-4887-a6ab-efa14b86c05f/Ftm.svg?v=1702526884748"
+                alt=""
+                style="
+                  width: 25px;
+                  height: 25px;
+                  float: left;
+                  margin-right: 10px;
+                "
+              /><span>6000</span>
+            </div>
+            <div class="miItem_seller">
+              <p style="margin-top: 0px; margin-bottom: 0px">Seller:</p>
+              <span>0x78...6789</span>
+            </div>
+            <button class="trade_BTN02" onlick="">Buy</button>
+          </div>
+          <div class="miMyInsItem02">
+            <div class="miItem_name">FTMS</div>
+            <div class="miItem_amount"><span>40000</span></div>
+            <div class="miItem_per_price"><span>0.15 FTM/FTMS</span></div>
+            <div class="miItem_price">
+              <img
+                src="https://cdn.glitch.global/db7f31e4-4de3-4887-a6ab-efa14b86c05f/Ftm.svg?v=1702526884748"
+                alt=""
+                style="
+                  width: 25px;
+                  height: 25px;
+                  float: left;
+                  margin-right: 10px;
+                "
+              /><span> 6000</span>
+            </div>
+            <div class="miItem_seller">
+              <p style="margin-top: 0px; margin-bottom: 0px">Seller:</p>
+              <span>0x78...6789</span>
+            </div>
+            <button class="trade_BTN02" onlick="">Buy</button>
+          </div>
+        </div>
+      </div>
+      <div class="MarketDiv" id="Market_Page3" style="display: none">
+        <div class="miMyInscrip">
+           <div id="my_listed"></div>
+        </div>
+      </div>
+    </div>
+   
+    <!-- ======== -->
+
+    <!-- ======== -->
+  </body>
+</html>
