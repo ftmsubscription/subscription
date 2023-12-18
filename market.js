@@ -29,12 +29,12 @@ async function getMax() {
     const TokenContract = result.tokens[0][0];
     TokenC = new web3.eth.Contract(abix, TokenContract);
     balanceOf = await TokenC.methods.balanceOf(address).call();
-    document.getElementById("MarketListAmount").value = formatNumberAbbreviation(balanceOf);
+    document.getElementById("MarketListAmount").value = balanceOf;
 }
 
 async function getTotalVolume() {
     var volume = await marketContract.methods.totalVolume().call();
-    document.getElementById("Volume").innerHTML =  volume
+    document.getElementById("Volume").innerHTML =  Intl.NumberFormat().format(volume)
 }
 
 
