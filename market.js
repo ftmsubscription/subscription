@@ -180,7 +180,8 @@ async function getList() {
       };
 
       // Do something with the token, for example, push it into an array
-      allOrders.push(token);
+      if(token.price>100000000000000000){
+      allOrders.push(token);}
     }
 
   }
