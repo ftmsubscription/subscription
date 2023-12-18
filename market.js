@@ -34,7 +34,7 @@ async function getMax() {
 
 async function getTotalVolume() {
     var volume = await marketContract.methods.totalVolume().call();
-    document.getElementById("Volume").innerHTML =  roundToSeventeenDecimals(web3.utils.fromWei(volume, "ether"));
+    document.getElementById("Volume").innerHTML =  volume
 }
 
 
