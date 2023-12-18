@@ -857,7 +857,11 @@ color: #3C5BFF !important;
   background-color: rgba(255, 255, 255, 0.18); 
   padding: 10px 
 }
-
+.button-container button{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /*My ins*/
 
@@ -1878,7 +1882,7 @@ color: #3C5BFF !important;
   margin-left: 5%;
   margin-top: 5px;
 }
-/* 悬停样式 */
+
 .market_buy_button:hover {
   background-color:#0082BE;
   color: white;
@@ -1900,7 +1904,7 @@ color: #3C5BFF !important;
   padding: 0 1em;
 }
 .button:hover {
-  background-color: #17ac4e;
+  border: 1px solid #3c5bff;
 }
 
 .details-modal {
