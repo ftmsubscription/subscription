@@ -3,10 +3,16 @@ var marketContract;
 var TokenContract;
 var result_id;
 var floor;
-
+var sort="FTM";
+var allOrders;
 document.addEventListener("DOMContentLoaded", function () {
   marketContract = new web3.eth.Contract(abix, marketAddress);
 });
+
+function sortBy(sortType){
+  sort=sortType;
+  refreshListed(allOrders);
+}
 
 async function getHolders() {
   const result = await myContract.methods.getTokensByPage(1, 10).call();
@@ -142,7 +148,7 @@ async function confirmOrder() {
 }
 
 async function getList() {
-  var allOrders = [];
+  allOrders = [];
 
   const result = await myContract.methods.getTokensByPage(1, 10).call();
 
@@ -169,6 +175,7 @@ async function getList() {
         price: result_list[n].price,
         seller: result_list[n].seller,
         amount: result_list[n].amount,
+        oneprice:result_list[n].price/result_list[n].amount,
         id: result_id[n],
       };
 
@@ -224,10 +231,20 @@ async function getUserList() {
 function refreshListed(allOrders) {
   const listed = $("#listed");
   listed.empty();
-
-  const sortedTokenList = allOrders.slice().sort((a, b) => a.price - b.price);
-  floor=sortedTokenList[0].price;
-  Floor.innerHTML=web3.utils.fromWei(floor, "ether") ;
+  var sortedTokenList
+  
+  if(sort=="FTM"){
+    sortedTokenList = allOrders.slice().sort((a, b) => a.price - b.price);
+    floor=sortedTokenList[0].price;
+    Floor.innerHTML=web3.utils.fromWei(floor, "ether") ;
+  }else{
+    sortedTokenList = allOrders.slice().sort((a, b) => a.oneprice - b.oneprice);
+    floor=sortedTokenList[0].oneprice;
+    var resultCeil = Math.ceil(floor)
+    Floor.innerHTML=web3.utils.fromWei(resultCeil.toString(), "ether") ;
+  }
+  
+  
   // Render items based on the sorted token list
   sortedTokenList.forEach((token) => {
     listed.append(
@@ -269,7 +286,7 @@ function renderListedItem(amount, price, seller, id) {
     Intl.NumberFormat().format(amount) +
     "</span></div>" +
     '<div class="miItem_per_price"><span>' +
-     web3.utils.fromWei(price, "ether")/amount +
+     roundTofiveDecimals(web3.utils.fromWei(price, "ether")/amount) +
     " FTM/FTMS</span></div>" +
     "</div>" +
     '<div class="tradelist_info_B">' +
@@ -278,7 +295,7 @@ function renderListedItem(amount, price, seller, id) {
     "</span></div>" +
     '<div class="Splitline"><i style="border-bottom: 1px solid gray;width:99%;"></i></div>' +
     '<div class="miItem_price"><img src="https://cdn.glitch.global/db7f31e4-4de3-4887-a6ab-efa14b86c05f/Ftm.svg?v=1702526884748" alt="" style="width: 25px; height: 25px; float: left; margin-right: 10px;"><span>' +
-    web3.utils.fromWei(price, "ether") +
+    roundTofiveDecimals(web3.utils.fromWei(price, "ether")) +
     "</span></div>" +
     '<button class="trade_BTN02" onclick="buyItem(' +
     id +
@@ -337,8 +354,8 @@ function formatNumberAbbreviation(number) {
   } 
 }
 
-function roundToSeventeenDecimals(number) {
+function roundTofiveDecimals(number) {
   const absNumber = Math.abs(number);
-  return absNumber.toFixed(17).replace(/\.?0+$/, ''); 
+  return absNumber.toFixed(5).replace(/\.?0+$/, ''); 
   
 }
